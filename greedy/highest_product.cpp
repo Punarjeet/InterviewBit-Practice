@@ -18,7 +18,7 @@ return max(mx1*mx2*mx3,mn1*mn2*mx1)
 /*class Solution{
 public :
     int maxp3(vector<int>&);
-};*
+};*/
 int Solution :: maxp3(vector <int> &A)
 {
     int n = A.size();
