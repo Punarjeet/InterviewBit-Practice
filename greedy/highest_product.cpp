@@ -15,10 +15,10 @@ suppose mx1 ,mx2,mx3 are first three maximum elements respectively and
 mn1 and mn2 are the first 2 minimum elements
 return max(mx1*mx2*mx3,mn1*mn2*mx1)
 */
-class Solution{
+/*class Solution{
 public :
     int maxp3(vector<int>&);
-};
+};*
 int Solution :: maxp3(vector <int> &A)
 {
     int n = A.size();
@@ -63,7 +63,7 @@ int Solution :: maxp3(vector <int> &A)
    // cout << mx1 <<" " << mx2 << " " << mx3 <<" " << mn1 <<" " << mn2 << endl;
     return max(mx1*mx2*mx3,mn1*mn2*mx1) ;
 }
-int main()
+/*int main()
 {
     int t ;
     cin >> t ;
@@ -81,3 +81,4 @@ int main()
     }
     return 0;
 }
+*/
