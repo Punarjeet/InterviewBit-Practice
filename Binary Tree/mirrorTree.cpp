@@ -12,7 +12,7 @@ struct Node{
     }
 };
 
-// print mirror recursively 
+// print mirror recursively
 void mirrorTree(Node *root)
 {
     if(root == NULL) return;
