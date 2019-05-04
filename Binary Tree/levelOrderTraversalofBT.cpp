@@ -29,18 +29,24 @@ void levelOrderTraversal(Node *root)
     }
 }
 void reverseLevelOrderTraversal(Node *root){
-    if(root == NULL) return ;
     queue <Node*> q;
+    stack <Node*> s;
     q.push(root);
     while(!q.empty())
     {
-        Node *tmp = q.front();
-        cout << tmp->data <<" ";
+       root = q.front();
         q.pop();
-        if(tmp->right != NULL)
-          q.push(tmp->right);
-        if(tmp->left != NULL)
-          q.push(tmp->left);
+        s.push(root);
+        if(root->right != NULL)
+          q.push(root->right);
+        if(root->left != NULL)
+          q.push(root->left);
+    }
+    while(!s.empty())
+    {
+       root = s.top();
+       cout << root->data <<" " ;
+       s.pop();
     }
 }
 
@@ -53,7 +59,7 @@ int main()
     root->left->right = new Node(5);
     cout << "Level order traversal of binary tree: ";
     levelOrderTraversal(root);
-    cout <<"Reverse level order traversal of binary tree :" << endl;
+    cout << endl << "Reverse level order traversal of binary tree :";
     reverseLevelOrderTraversal(root);
     return 0;
 }
